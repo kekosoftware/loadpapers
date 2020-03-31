@@ -61,18 +61,41 @@
         </h4>
         <table class="table table-striped">
           <tbody>
+            <?php 
+              $select_stmt= $db->prepare('SELECT tblF.name AS title, tblTF.description AS typeFile, tblF.image AS nameFile FROM dbFolletos.tbl_file AS tblF INNER JOIN tbl_typeFile as tblTF ON tblF.typeFile = tblTF.id WHERE tblF.team = 1 AND tblF.typeFile = 1 ORDER BY tblF.image DESC;');	//sql select query
+              $select_stmt->execute();
+              while($row=$select_stmt->fetch(PDO::FETCH_ASSOC))
+              {
+                $eLink = "../subirfolletos/upload/".$row['nameFile'];
+            ?>
             <tr>
               <th scope="row" class="icon_color"><i class="fa fa-file" aria-hidden="true"></i></th>
-              <td><a href="./pdf/protocolo_provincial_de_COVID-19.pdf">Protocolo Provincial COVID-19</a></td>
+              <td><a href=<?php echo $eLink;?>><?php echo "(".$row['typeFile'].") ".$row['title'] ?></a></td>
             </tr>
+            <?php
+              }
+            ?>
+          </tbody>
+        </table>
+        <h4 class="card-title">
+          <a href="#">Listado Multimedia</a>
+        </h4>
+        <table class="table table-striped">
+          <tbody>
+            <?php 
+              $select_stmt= $db->prepare('SELECT tblF.name AS title, tblTF.description AS typeFile, tblF.image AS nameFile FROM dbFolletos.tbl_file AS tblF INNER JOIN tbl_typeFile as tblTF ON tblF.typeFile = tblTF.id WHERE tblF.team = 1 AND (tblF.typeFile = 2 OR tblF.typeFile = 3) ORDER BY tblF.image DESC;');	//sql select query
+              $select_stmt->execute();
+              while($row=$select_stmt->fetch(PDO::FETCH_ASSOC))
+              {
+                $eLink = "../subirfolletos/upload/".$row['nameFile'];
+            ?>
             <tr>
               <th scope="row" class="icon_color"><i class="fa fa-file" aria-hidden="true"></i></th>
-              <td><a href="./pdf/protocolo_provincial_de_COVID-19.pdf">Protocolo Provincial COVID-19 (16-Mar-2020)</a></td>
+              <td><a href=<?php echo $eLink;?>><?php echo "(".$row['typeFile'].") ".$row['title'] ?></a></td>
             </tr>
-            <tr>
-              <th scope="row" class="icon_color"><i class="fa fa-file" aria-hidden="true"></i></th>
-              <td><a href="./pdf/Instructivo_para_Personas_Aisladas_EquipoSalud.pdf">Protocolo para personas aisladas (16-Mar-2020)</a></td>
-            </tr>
+            <?php
+              }
+            ?>
           </tbody>
         </table>
       </div>
