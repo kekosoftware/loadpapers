@@ -5,7 +5,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Inmobiliaria</title>
+  <title>DESCARGA DE FOLLETOS PARA EL CORONA VIRUS</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
