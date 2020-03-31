@@ -1,0 +1,80 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.ribbon_ocupado {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: 24px solid transparent;
+  border-top: 25px solid red;
+  position: absolute;
+  bottom: 356px;
+  right: -40px;
+  padding: 0 10px;
+  width: 160px;
+  color: white;
+  font-family: sans-serif;
+  size: 11px;
+}
+.ribbon_ocupado .txt {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+}
+
+.ribbon_disponible {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: 24px solid transparent;
+  border-top: 25px solid #2daa2d;
+  position: absolute;
+  bottom: 356px;
+  right: -40px;
+  padding: 0 10px;
+  width: 160px;
+  color: white;
+  font-family: sans-serif;
+  size: 11px;
+}
+.ribbon_disponible .txt {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+}
+.card-body table .icon_color { color: #0dbae8; }
+
+.navbar .container .icons-menu-top a {
+  color: white;
+}
